@@ -1,0 +1,62 @@
+@font-face {  
+  src: url(Ubuntu-regular.ttf);
+  font-family: "Ubuntu-regular";
+}
+@font-face {  
+  src: url(Ubuntu-Medium.ttf);
+  font-family: "Ubuntu-Medium";
+}
+@font-face {  
+  src: url(Ubuntu-Bold.ttf);
+  font-family: "Ubuntu-Bold";
+}
+@font-face {  
+  src: url(SourceSansPro-Regular.ttf);
+  font-family: "SourceSansPro-Regular";
+}
+* {
+  font-family: "SourceSansPro-Regular";
+  font-size: 14px;
+}
+p {
+  background-color: white;
+  color: black; /* text color */
+}
+h2 {
+  font-family: 'Ubuntu-Bold', san-serif;
+}
+/* Change header text to imported font */
+h3 {
+  font-family: 'Ubuntu-Medium', sans-serif;
+  color: #76B1B1;
+}
+
+.navbar {
+  background-color: #76B1B1;
+}
+
+.navbar-default .navbar-brand {
+  color: white; 
+  font-family: Ubuntu-Bold !important;
+  background-color: #326868;
+}
+
+.navbar-default .navbar-nav>li>a {color: white;}
+
+.navbar-nav li a:hover, .navbar-nav > .active > a {
+  color: #000000 !important;
+  background-color: white !important;
+  background-image: none;
+}
+
+/* sidebarPanel */ 
+.well {
+  background-color: white;
+  opacity: 0.85;
+  padding: 20px 20px 20px 20px;
+  margin: auto;
+  border-radius: 5pt;
+  box-shadow: 0 0 10pt 0 #76B1B1;
+  padding-bottom: 2mm;
+  padding-top: 2mm;
+}

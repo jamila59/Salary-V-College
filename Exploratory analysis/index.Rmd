@@ -1,0 +1,56 @@
+---
+title: "Exploratory Analysis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+source("summary.R")
+source("liberal_arts_school_vs_salary_growth.R")
+source("school_type_vs_starting_median_salary.R")
+source("start_vs_med_salary_major.R")
+source("table.R")
+```
+
+## Domain of Interest 
+
+Our groups area of interest lies in interpreting how different factors such as type of college, region of college and type of degree earned impact the overall salary of the graduate over time. In our analysis we will be examining three datasets which hold observations relating to: (1) choice of degree (2) college type, and (3) region of attendance. Inspecting these datasets will allows our group to answer questions relating to how these factor interplay with one another. 
+
+## Summary 
+
+For our report, we will be analyzing `r summary_info$num_observations_majors` different majors to understand how salary earned tends to fluctuate by major and over time. Additionally, our report will look at `r  summary_info$num_observation_region` regions of colleges to get a trend for how the location of the college impact salary of the graduate. In total, we will examine `r summary_info$num_observation_colleges` colleges. So far our report has discovered that `r summary_info$max_salary_major`'s tend to earn the highest salary, `r summary_info$highest_starting_salary_school` takes place for the highest salary school and that `r summary_info$highet_starting_salary_region` is that highest salary region in the United States. 
+
+## Table 
+
+```{r echo = F}
+kable(max_salary_by_region)
+```
+
+The table above shows the maximum salary by region for college graduates at the beginning and middle of their career. One striking observation from this table is that different regions have very differing ranges for starting salaries, but are closer in ranges for mid-career salaries. 
+
+## Charts 
+
+### Salary Growth in Liberal Arts
+
+```{r echo = F}
+liberal_arts_plot
+```
+
+The chart above demonstrates the percent growth observed in individuals who graduated from Liberal Arts Schools. The percent growth of these observations rely on the salary growth reported by individuals from the start of their careers to the mid of the career. In order to display how different regions contract one another we have grouped this analysis by regions of the United States. This chart provides insight into the fact that Northeastern Liberal Arts graduates tend to have higher percent growth than other regions in the US. 
+
+### School type vs Starting Salary Box Plot
+
+```{r echo = F}
+school_salary_plot
+```
+
+This additional chart demonstrated the relationship between school type and the median salary earned by the graduate. One of the most prevalent observations that can be discovered through this chart is that engineering student tend to have higher starting salaries than state, party and liberal arts schools. Another interesting observation from these box-plots is that Ivy League schools also tend to have higher starting median salaries, but have a much narrower range than engineering schools. 
+
+### Comparison of Salary to Major 
+
+```{r echo = F}
+major_salary_plot
+```
+
+This last chart reflects the range of salaries earned by graduates of different majors. This graph is intended to display to starting median salary, mid-career median salary as well as different ranges of percentiles of different undergraduate degrees so that readers can get a sense of how majors differ from one another, and to shows differences in salary within individual majors. One striking observation that can be made about this visualization is that the 90th percentile of nursing majors parallels many of the 75th percentiles salaries earned by different majors like Journalism and Chemistry.
